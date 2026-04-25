@@ -1,4 +1,5 @@
 import { refreshInv } from "./util.js";
+
 var balloonNum = 4;
 const balloons = document.querySelector("#balloons");
 balloons.addEventListener("click", () => {
@@ -16,8 +17,6 @@ basket.addEventListener("click", () => {
     basketScene.style.display = "none";
   });
 });
-
-//add key inside apple -> unlock door at end
 
 const appleButton = document.querySelector("#appleCloseUp");
 const apple = appleButton.firstChild;
@@ -45,3 +44,15 @@ appleButton.addEventListener("click", function bite() {
 });
 
 refreshInv();
+var dialogIndex = 0;
+const dialogTextList = ["*You wake up in a strange place.*", "hello"];
+const dialog = document.querySelector("#dialog");
+const dialogText = document.querySelector("#dialogText");
+dialog.showModal();
+dialog.addEventListener("click", () => {
+  if (dialogIndex >= dialogTextList.length) {
+    dialog.close();
+  }
+  dialogText.innerHTML = dialogTextList[dialogIndex];
+  dialogIndex++;
+});
