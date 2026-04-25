@@ -3,10 +3,16 @@ body {
   background-size: cover;
 }
 
+#horse {
+  position: absolute;
+  left: 70%;
+  top: 63%;
+}
+
 #balloons {
   position: absolute;
   left: 80%;
-  top: -175%;
+  bottom: 75%;
 }
 
 #swing {
@@ -30,7 +36,7 @@ body {
 #basket {
   position: absolute;
   left: 20%;
-  top: -40%;
+  bottom: 80%;
 }
 
 #basket img {
