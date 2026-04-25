@@ -20,7 +20,7 @@ button:hover {
 }
 
 #inventory {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: row;
