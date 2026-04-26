@@ -56,12 +56,6 @@ body {
   display: none;
 }
 
-#exitBasket {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 #appleCloseUp {
   position: fixed;
   bottom: 30%;

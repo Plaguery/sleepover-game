@@ -68,3 +68,10 @@ button {
 #comboLock {
   display: none;
 }
+
+#hint1Up,
+#hint2Up,
+#hint3Up,
+#hint4Up {
+  display: none;
+}

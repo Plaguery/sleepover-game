@@ -27,7 +27,11 @@ showDialogue(
 var balloonNum = 4;
 const balloons = document.querySelector("#balloons");
 const balloonImg = balloons.firstChild;
+
 balloons.addEventListener("click", function popBalloon() {
+  let balloonPop = new Audio("music/balloon.wav");
+  balloonPop.volume = 0.5;
+  balloonPop.play();
   switch (balloonNum) {
     case 4:
       balloonImg.setAttribute("src", "assets/1_balloons2.png");

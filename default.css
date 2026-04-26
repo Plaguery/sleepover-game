@@ -29,6 +29,16 @@ button:hover {
   flex-direction: row;
 }
 
+#inventory {
+  display: flex;
+  flex-direction: row;
+}
+
+.backButton {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 .invItem {
   background-color: rgba(255, 255, 255, 0.726);
   margin: 5px;

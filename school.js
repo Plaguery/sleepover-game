@@ -77,4 +77,29 @@ submit.addEventListener("click", () => {
   }
 });
 
+//event listeners - pop up hints on click
+
+const hint1 = document.querySelector("#hint1");
+const hint1Up = document.querySelector("#hint1Up");
+hint1.addEventListener("click", () => {
+  closeUp(hint1Up, document.querySelector("#exitH1"));
+});
+
+const hint2 = document.querySelector("#hint2");
+const hint2Up = document.querySelector("#hint2Up");
+hint2.addEventListener("click", () => {
+  closeUp(hint1Up, document.querySelector("#exitH2"));
+});
+
+const hint3 = document.querySelector("#hint3");
+const hint3Up = document.querySelector("#hint3Up");
+hint3.addEventListener("click", () => {
+  closeUp(hint3Up, document.querySelector("#exitH3"));
+});
+
+const hint4 = document.querySelector("#hint4");
+const hint4Up = document.querySelector("#hint4Up");
+hint4.addEventListener("click", () => {
+  closeUp(hint4Up, document.querySelector("#exitH4"));
+});
 refreshInv();
