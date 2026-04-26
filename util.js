@@ -7,8 +7,8 @@ export function getCookies() {
 }
 export function refreshInv() {
   const inv = [
-    { name: "key", src: "assets/key.png" },
-    { name: "scissors", src: "assets/level__apple.png" },
+    { name: "key", src: "assets/ico_key.png" },
+    { name: "scissors", src: "assets/ico_scissors.png" },
   ];
 
   const inventory = document.querySelector("#inventory");

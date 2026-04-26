@@ -1,5 +1,16 @@
 import { refreshInv, showDialogue, closeUp } from "./util.js";
 
+const bgm = new Audio("music/1_bgm.mp3");
+bgm.loop = true;
+bgm.volume = 0.03;
+
+document.querySelector("body").addEventListener(
+  "click",
+  () => {
+    bgm.play();
+  },
+  { once: true },
+);
 const dialog = document.querySelector("#dialog");
 const dialogText = document.querySelector("#dialogText");
 refreshInv();
@@ -15,8 +26,23 @@ showDialogue(
 
 var balloonNum = 4;
 const balloons = document.querySelector("#balloons");
-balloons.addEventListener("click", () => {
-  balloons.innerHTML = balloonNum;
+const balloonImg = balloons.firstChild;
+balloons.addEventListener("click", function popBalloon() {
+  switch (balloonNum) {
+    case 4:
+      balloonImg.setAttribute("src", "assets/1_balloons2.png");
+      break;
+    case 3:
+      balloonImg.setAttribute("src", "assets/1_balloons3.png");
+      break;
+    case 2:
+      balloonImg.setAttribute("src", "assets/1_balloons4.png");
+      break;
+    case 1:
+      balloonImg.style.display = "none";
+      balloons.removeEventListener("click", popBalloon);
+      break;
+  }
   balloonNum -= 1;
 });
 
@@ -64,7 +90,7 @@ appleButton.addEventListener("click", function bite() {
       apple.setAttribute("src", "assets/1_apple5.png");
       showDialogue(["Item collected!"], dialog, dialogText);
       document.cookie = "key=true";
-      removeEventListener("click", bite);
+      appleButton.removeEventListener("click", bite);
       appleButton.style.pointerEvents = "none";
       break;
   }
