@@ -5,6 +5,15 @@ export function getCookies() {
     return prev;
   }, {});
 }
+
+export function clearCookies() {
+  const cookies = document.cookie.split(";");
+  for (const pair of cookies) {
+    //splits key val pair
+    const vals = pair.split("=");
+    document.cookie = `${vals[0]}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
+  }
+}
 export function refreshInv() {
   const inv = [
     { name: "key", src: "assets/ico_key.png" },
