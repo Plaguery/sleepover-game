@@ -4,3 +4,13 @@ h1 {
   top: 10px;
   left: 10px;
 }
+
+body {
+  background-image: url("assets/title.png");
+}
+
+#play {
+  position: absolute;
+  left: 46%;
+  bottom: 04%;
+}

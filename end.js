@@ -17,14 +17,20 @@ showDialogue(
   dialogText,
 );
 door.addEventListener("click", () => {
+  closeUp(document.querySelector("#doorUp"), document.querySelector("#bye"));
   if (cookies.key) {
-    showDialogue([
-      "You step up to the door, only to realize it's locked.",
-      "Hm...",
-      "Good thing I found that key earlier.",
-      "You unlock the door, and step forward.",
-      "YOU ESCAPED: GOOD ENDING",
-    ]);
+    showDialogue(
+      [
+        "You step up to the door, only to realize it's locked.",
+        "Hm...",
+        "Good thing I found that key earlier.",
+        "You unlock the door, and step forward.",
+        "YOU ESCAPED: GOOD ENDING",
+      ],
+      dialog,
+      dialogText,
+    );
+    document.querySelector("#doorUp").href = "index.html";
   } else {
     const eerie = new Audio("music/eerie.mp3");
     eerie.play();
@@ -38,7 +44,9 @@ door.addEventListener("click", () => {
       dialog,
       dialogText,
     );
-    closeUp(document.querySelector("#phone"), document.querySelector("#bye"));
-    //show phone pop up etc etc
+
+    document.querySelector("#doorUp").href = "endless.html";
+
+    //show phone pop up etc etcen
   }
 });
