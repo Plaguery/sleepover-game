@@ -108,3 +108,12 @@ appleButton.addEventListener("click", function bite() {
   }
   bites -= 1;
 });
+
+const sun = document.querySelector("#sun");
+sun.addEventListener("click", () => {
+  showDialogue(
+    ["You smile up at the sun,", "And it smiles back at you."],
+    dialog,
+    dialogText,
+  );
+});

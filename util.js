@@ -21,7 +21,7 @@ export function refreshInv() {
   ];
 
   const inventory = document.querySelector("#inventory");
-  console.log(inventory);
+  inventory.innerHTML = "";
   const cookies = getCookies();
 
   for (const i of inv) {

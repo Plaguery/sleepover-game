@@ -52,10 +52,10 @@ lock.addEventListener("click", () => {
 submit.addEventListener("click", () => {
   var code = "";
   var comboBox = combo.children;
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 4; i++) {
     code += comboBox[i].value;
   }
-  if (code == "462") {
+  if (code == "4622") {
     console.log("got it");
     showDialogue(
       [
