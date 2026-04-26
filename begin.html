@@ -12,6 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script type="module" src="default.js" defer></script>
     <script type="module" src="begin.js" defer></script>
   </head>
   <body>
@@ -22,12 +23,14 @@
       <button id="basket"><img src="assets/1_basket.png" /></button>
       <img id="table" src="assets/1_table.png" />
     </div>
-    <dialog id="dialog" class="dotgothic">
+    <dialog id="dialog">
       <p id="dialogText">...</p>
     </dialog>
 
     <section id="inventory">
-      <button class="navButton"><a href="school.html">NEXT</a></button>
+      <a href="school.html" id="nextCont"
+        ><img id="next" src="assets/ui_next.png"
+      /></a>
     </section>
 
     <div class="closeUp" id="basketCloseUp">

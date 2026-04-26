@@ -20,14 +20,20 @@ button {
 
 #hint2 {
   position: absolute;
+  left: 45%;
+  top: 30%;
 }
 
 #hint3 {
   position: absolute;
+  right: 3%;
+  top: 50%;
 }
 
 #hint4 {
   position: absolute;
+  left: 15%;
+  top: 25%;
 }
 #bookCloseUp {
   display: none;
