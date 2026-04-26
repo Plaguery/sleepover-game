@@ -79,4 +79,10 @@ button:hover {
 #next {
   width: 30%;
   margin: 0px 15px;
+  transform: scale(1);
+}
+
+#next:hover {
+  transition: all 0.6s;
+  transform: scale(1.2);
 }
