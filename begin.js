@@ -18,7 +18,7 @@ showDialogue(
   [
     "You wake up in a strange place.",
     "Everything feels familiar, yet you're certain you've never been here before.",
-    "You decide to look around.",
+    "Maybe you should look around.",
   ],
   dialog,
   dialogText,
@@ -64,7 +64,11 @@ balloons.addEventListener("click", function popBalloon() {
 const swings = document.querySelector("#swing");
 swings.addEventListener("click", () => {
   showDialogue(
-    ["You sit and swing for a while.", "That was fun."],
+    [
+      "You sit and swing for a while.",
+      "You haven't done this since you were a child.",
+      "That was fun.",
+    ],
     dialog,
     dialogText,
   );
@@ -103,7 +107,16 @@ appleButton.addEventListener("click", function bite() {
       break;
     case 0:
       apple.setAttribute("src", "assets/1_apple5.png");
-      showDialogue(["Item collected!"], dialog, dialogText);
+      showDialogue(
+        [
+          "???",
+          "You bite down on something hard and metallic.",
+          "It's a key!",
+          "Item collected!",
+        ],
+        dialog,
+        dialogText,
+      );
       document.cookie = "key=true";
       appleButton.style.pointerEvents = "none";
       refreshInv();

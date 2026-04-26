@@ -13,7 +13,8 @@ refreshInv();
 showDialogue(
   [
     "You find yourself falling once more",
-    "You land in an empty office building.",
+    "You land in an abandoned office building.",
+    "The electric hum is unsettling.",
   ],
   dialog,
   dialogText,

@@ -36,6 +36,7 @@ lock.addEventListener(
         "You attempt to open the cabinet.",
         "It's locked.",
         "Looks like you need to find a 4 digit code.",
+        "You decide to look for clues.",
       ],
       dialog,
       dialogText,
@@ -57,12 +58,12 @@ submit.addEventListener("click", () => {
     code += comboBox[i].value;
   }
   if (code == "4025") {
-    console.log("got it");
     showDialogue(
       [
         "You twist the dials...",
         "And the lock pops open!",
         "Inside the cabinet, you find a pair of scissors.",
+        "Item collected!",
       ],
       dialog,
       dialogText,
